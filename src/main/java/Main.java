@@ -29,10 +29,10 @@ public class Main {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    if (isLineValid(line)) {
+                   // if (isLineValid(line)) {
                         List<String> parts = Arrays.asList(line.split(";"));
                         uniqueLines.add(parts);
-                    }
+                   // }
                 }
             }
         }
@@ -52,6 +52,7 @@ public class Main {
                 return false;
             }
             if (part.length() != 11 && !part.isEmpty()) {
+                System.out.println("Строка не валидна" + input);
                 return false; // Некорректная ячейка
             }
         }
