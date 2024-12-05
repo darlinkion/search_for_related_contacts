@@ -7,7 +7,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         long startTime = System.nanoTime();
-
         // Читаем строки построчно и сразу удаляем некорректные и дубликаты
         Set<List<String>> uniqueLines = readUniqueValidLines(args[0]);
 
